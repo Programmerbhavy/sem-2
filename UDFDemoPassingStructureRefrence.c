@@ -1,0 +1,42 @@
+/*
+WAP to show demo of User Defined Function where we will be able to pass Structure object as Reference to the function and display the
+structure members inside the function.
+*/
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+struct Student
+{
+    char name[100];
+    int rollNo;
+    float marks;
+};
+
+void displayStudent(struct Student *stu)
+{
+    stu->marks += 5.0;
+    printf("\nStudent Details:\n");
+    printf("Name: %s\n", stu->name);
+    printf("Roll No: %d\n", stu->rollNo);
+    printf("Marks: %.2f\n", stu->marks);
+}
+int main()
+{
+    struct Student student;
+
+    printf("Enter Student Name: ");
+    scanf("%s", student.name);
+
+    printf("Enter Roll No: ");
+    scanf("%d", &student.rollNo);
+
+    printf("Enter Marks: ");
+    scanf("%f", &student.marks);
+
+    displayStudent(&student);
+
+    printf("\nUpdated Marks in main(): %.2f\n", student.marks);
+
+    return 0;
+}

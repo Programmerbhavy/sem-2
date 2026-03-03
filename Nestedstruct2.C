@@ -1,4 +1,4 @@
-//wap in c to demonstrate nested structure
+// wap in c to demonstrate nested structure
 
 struct Address
 {
@@ -6,42 +6,42 @@ struct Address
     int pincode;
 };
 
-struct Student 
+struct Student
 {
     char name[100];
-    int sid;
+    int stdId;
     struct Address homeAddress;
-    float sper;
+    float per;
 };
-#include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
-int main() 
- {
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+int main()
+{
     struct Student std;
 
-    printf("Enter Student Name :\n");
-    scanf("%s",std.name);
+    printf("Enter Student Name : \n");
+    scanf("%s", std.name);
 
-    printf("Enter Student SID : \n");
-    scanf("%d",&std.sid);
+    printf("Enter Student ID : \n");
+    scanf("%d", &std.stdId);
 
-    printf("Enter Student City : \n");
-    scanf("%s",std.homeAddress.city);
+    printf("Enter Percentage : \n");
+    scanf("%f", &std.per);
 
-    printf("Enter Area Pincode : \n");
-    scanf("%d",&std.homeAddress.pincode);
+    printf("Enter Area : \n");
+    scanf("%s", std.homeAddress.city);
 
-    printf("Enter Student Percentage : \n");
-    scanf("%f",&std.sper);
-    
-    //Display
-    printf("\nEmployee Display\n");
-    printf("Name : %s\n",std.name);
-    printf("Employee ID : %d\n",std.sid);
-    printf("City : %s\n",std.homeAddress.city);
-    printf("Pincode : %d\n",std.homeAddress.pincode);
-    printf("Pincode : %f\n",std.sper);
+    printf("Enter Pincode : \n");
+    scanf("%d", &std.homeAddress.pincode);
+
+    // Display
+    printf("\nStudent Details Display\n");
+    printf("Name : %s\n", std.name);
+    printf("Student ID : %d\n", std.stdId);
+    printf("Percentage : %f\n", std.per);
+    printf(" Area : %s\n", std.homeAddress.city);
+    printf("Pincode : %d\n", std.homeAddress.pincode);
 
     return 0;
 }

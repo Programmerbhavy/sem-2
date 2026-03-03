@@ -1,4 +1,5 @@
-/*
+
+/* 
  WAP to store bank account details like Account NO, 
 Account Name, Account Type, Account Balance,using structure.
 */

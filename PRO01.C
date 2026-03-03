@@ -1,11 +1,11 @@
 #include<stdio.h>
 #include<conio.h>
-void main()
+int main() ;
 {
 char name[10][30];
 int i;
-clrscr();
-
+system("cls");
+{
 printf("enter names of 10 student ");
 
 	for(i=0;i<10;i++)
@@ -21,7 +21,7 @@ printf("\n	 list of students:\n");
 	}
 
 printf("\n program sucessful");
-
-getch();
+}
+return 0;
 
 }
